@@ -24,9 +24,22 @@ dependencies:
 
 
 test:
-    override:
-       - (./gradlew assemble):
-            timeout: 360
+    pre:
+        - emulator -avd circleci-android22 -no-audio -no-window:
+              background: true
+              parallel: true
+        - circle-android wait-for-boot
+        # unlock emulator
+        - sleep 30
+        - adb shell input keyevent 82
+
+      override:
+        # This will run the tests:
+       - ./gradlew assemble connectedDebugAndroidTest -PdisablePreDex --console=plain --info
+
+      post:
+          - cp -r app/build/outputs $CIRCLE_ARTIFACTS
+          - cp -r app/build/outputs/androidTest-results/connected/ $CIRCLE_TEST_REPORTS
 
 
 
