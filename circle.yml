@@ -31,8 +31,6 @@ test:
         # wait for it to have booted
         - circle-android wait-for-boot
         # run tests  against the emulator.
-        - ./gradlew assembleDebug
-        - cp -r AndroidCircleCI/build/outputs $CIRCLE_ARTIFACTS
         - ./gradlew connectedAndroidTest
         # copy the build outputs to artifacts
         - cp -r AndroidCircleCI/build/outputs $CIRCLE_ARTIFACTS
