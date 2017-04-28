@@ -22,14 +22,13 @@ dependencies:
        - echo y | android update sdk --no-ui --all --filter tools,platform-tools,build-tools-25.0.2,extra-google-m2repository,extra-google-google-play-services,extra-android-support
        - ANDROID_HOME=/usr/local/android-sdk-linux ./gradlew dependencies
 
-
 test:
-    test:
-      override:
-       - ./gradlew assembleDebug
-       - cp -r AndroidCircleCI/build/outputs $CIRCLE_ARTIFACTS
+    override:
+
+      - ./gradlew assembleDebug
+      - cp -r AndroidCircleCI/build/outputs $CIRCLE_ARTIFACTS
         # start the emulator
-        - emulator -avd circleci-android24 -no-window:
+      - emulator -avd circleci-android24 -no-window:
             background: true
             parallel: true
         # wait for it to have booted
