@@ -3,8 +3,8 @@
 #
 
 general:
-#    artifacts:
-#       - /home/ubuntu/AndroidCircleCI/app/build/outputs/apk/
+    artifacts:
+       - /home/ubuntu/AndroidCircleCI/app/build/outputs/apk/
 
     branches:
        only:
@@ -34,9 +34,9 @@ test:
       # run tests  against the emulator.
       - ./gradlew connectedAndroidTest
       # copy the build outputs to artifacts
-      - cp -r AndroidCircleCI/build/outputs $CIRCLE_ARTIFACTS
+#      - cp -r AndroidCircleCI/build/outputs $CIRCLE_ARTIFACTS
       # copy the test results to the test results directory.
-      - cp -r AndroidCircleCI/build/outputs/androidTest-results/* $CIRCLE_TEST_REPORTS
+#      - cp -r AndroidCircleCI/build/outputs/androidTest-results/* $CIRCLE_TEST_REPORTS
 
 
 
