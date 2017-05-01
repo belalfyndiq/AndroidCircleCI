@@ -31,6 +31,12 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
+        debug {
+            testCoverageEnabled = true
+            ext.betaDistributionReleaseNotes = "Release Notes for this build."
+            ext.betaDistributionEmails = "belalmohamed92@gmail.com"
+        }
     }
 }
 
