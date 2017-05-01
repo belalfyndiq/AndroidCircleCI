@@ -27,9 +27,11 @@ dependencies:
 test:
     override:
       - ./gradlew assembleDebug
+      - ./gradlew test
 
     post:
       - cp -r app/build/outputs $CIRCLE_ARTIFACTS
+      - cp -r app/build/test-results/mockDebug/ $CIRCLE_TEST_REPORTS
 
 
 
