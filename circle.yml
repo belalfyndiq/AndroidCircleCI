@@ -30,6 +30,10 @@ test:
       - ./gradlew test
 
 deployment:
-    override:
-      - if [ $CIRCLE_BRANCH = 'development' ]; then ./gradlew assembleDebug crashlyticsUploadDistributionDebug; fi
+    development:
+       branch: development
+       commands:
+         - ./gradlew assembleDebug crashlyticsUploadDistributionDebug
+#    override:
+#      - if [ $CIRCLE_BRANCH = 'development' ]; then ./gradlew assembleDebug crashlyticsUploadDistributionDebug; fi
 
