@@ -3,6 +3,11 @@
 #
 
 general:
+    artifacts:
+       - /home/ubuntu/AndroidCircleCI/app/build/outputs/apk/
+       - /home/ubuntu/AndroidCircleCI/app/build/reports/tests/testDebugUnitTest/
+
+
     branches:
        only:
           - development
@@ -24,10 +29,6 @@ test:
     override:
       - ./gradlew assembleDebug
       - ./gradlew test
-
-    post:
-      - cp -r app/build/outputs $CIRCLE_ARTIFACTS
-      - cp -r app/build/outputs $CIRCLE_TEST_REPORTS
 
 
 
