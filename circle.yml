@@ -28,5 +28,8 @@ dependencies:
 test:
     override:
       - ./gradlew test
+      - ./gradlew assembleRelease crashlyticsUploadDistributionRelease
+      - ext.betaDistributionReleaseNotes="Release Notes for this build."
+      - ext.betaDistributionEmails="belalmohamed92@gmail.com"
 #      - if [ $CIRCLE_BRANCH = 'development' ]; then ./gradlew assembleDebug; fi
-      
+
