@@ -29,7 +29,7 @@ test:
       - ./gradlew assembleDebug
 
     post:
-      -cp -r app/build/outputs $CIRCLE_ARTIFACTS
+      - cp -r app/build/outputs $CIRCLE_ARTIFACTS
 
 
 
