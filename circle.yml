@@ -28,5 +28,5 @@ dependencies:
 test:
     override:
       - ./gradlew test
-      - if [ $CIRCLE_BRANCH = 'development' ]; then ./gradlew assembleDebug; fi
-
+#      - if [ $CIRCLE_BRANCH = 'development' ]; then ./gradlew assembleDebug; fi
+      
