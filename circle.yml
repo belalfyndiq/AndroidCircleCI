@@ -27,7 +27,9 @@ dependencies:
 
 test:
     override:
-       - if [ ./gradlew test = 0 ]; then ./gradlew assembleDebug crashlyticsUploadDistributionDebug; fi
-#      - ./gradlew test
-#      - if [ $CIRCLE_BRANCH = 'development' ]; then ./gradlew assembleDebug crashlyticsUploadDistributionDebug; fi
+      - ./gradlew test
+
+deployment:
+    override:
+      - if [ $CIRCLE_BRANCH = 'development' ]; then ./gradlew assembleDebug crashlyticsUploadDistributionDebug; fi
 
