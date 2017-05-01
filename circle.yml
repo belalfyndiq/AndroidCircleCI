@@ -5,6 +5,7 @@
 general:
     artifacts:
        - /home/ubuntu/AndroidCircleCI/app/build/outputs/apk/
+       
 
     branches:
        only:
