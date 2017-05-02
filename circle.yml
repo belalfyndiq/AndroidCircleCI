@@ -20,8 +20,6 @@ machine:
 
 
 dependencies:
-    pre:
-       - mkdir ~/android_dependency_cache
     cache_directories:
        - "~/android_dependency_cache"
 
