@@ -34,6 +34,4 @@ deployment:
        branch: development
        commands:
          - ./gradlew assembleDebug crashlyticsUploadDistributionDebug
-#    override:
-#      - if [ $CIRCLE_BRANCH = 'development' ]; then ./gradlew assembleDebug crashlyticsUploadDistributionDebug; fi
 
