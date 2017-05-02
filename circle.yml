@@ -20,6 +20,11 @@ machine:
 
 
 dependencies:
+    pre:
+       - mkdir ~/android_dependency_cache
+    cache_directories:
+       - "~/android_dependency_cache"
+
     override:
        - echo y | android update sdk --no-ui --all --filter tools,platform-tools,build-tools-25.0.2,extra-google-m2repository,extra-google-google-play-services,extra-android-support
        - ANDROID_HOME=/usr/local/android-sdk-linux ./gradlew dependencies
@@ -34,4 +39,9 @@ deployment:
        branch: development
        commands:
          - ./gradlew assembleDebug crashlyticsUploadDistributionDebug
+
+    release:
+       branch: /release\/.*/
+       commands:
+         #Add deployments Commands for release branches here.
 
