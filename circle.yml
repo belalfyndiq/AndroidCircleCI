@@ -30,10 +30,6 @@ dependencies:
       - if [ ! -e /usr/local/android-sdk-linux/platforms/android-25 ]; then echo y | android update sdk --all --no-ui --filter "android-25"; fi;
       - if [ ! -e /usr/local/android-sdk-linux/extras/android/m2repository ]; then echo y | android update sdk --all --no-ui --filter "extra-android-m2repository"; fi;
 
-#       - echo y | android update sdk --no-ui --all --filter tools,platform-tools,build-tools-25.0.2,extra-google-m2repository,extra-google-google-play-services,extra-android-support
-#       - ANDROID_HOME=/usr/local/android-sdk-linux ./gradlew dependencies
-
-
 test:
     override:
       - ./gradlew test
