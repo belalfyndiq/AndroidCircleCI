@@ -49,6 +49,5 @@ deployment:
         - cat ${HOME}/keystore64.txt | base64 --decode > ${HOME}/testkeystore.jks
         - ./gradlew assembleRelease
 
-         #TODO Handling deploying Release Signed apk here.
-         #Add deployments Commands for release branches here.
+        #TODO HANDLE RELEASE ON BETA HERE.
 

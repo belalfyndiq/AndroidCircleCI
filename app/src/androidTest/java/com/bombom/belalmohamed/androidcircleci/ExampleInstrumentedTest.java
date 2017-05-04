@@ -1,4 +1,4 @@
-package com.example.belalmohamed.androidcircleci;
+package com.bombom.belalmohamed.androidcircleci;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
