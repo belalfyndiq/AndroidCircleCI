@@ -39,8 +39,9 @@ deployment:
        commands:
          - echo "Running deployment for development"
          - echo $KEYSTORE64
-         - base64 --version
          - echo $KEYSTORE64> ${HOME}/keystore64.txt
+         - echo ${HOME}
+         - echo ${HOME}/keystore64.txt
 #         - cat ${HOME}/keystore64.txt | base64 --d > ${HOME}/keystore.jks
          - ./gradlew assembleDebug crashlyticsUploadDistributionDebug
 
