@@ -42,8 +42,9 @@ deployment:
          - echo $KEYSTORE64> ${HOME}/keystore64.txt
          - echo ${HOME}
          - cat ${HOME}/keystore64.txt
-         - cat ${HOME}/keystore64.txt | base64 --decode > ${HOME}/testkeystore.jks
+         - cat ${HOME}/keystore64.txt | base64 -D > ${HOME}/testkeystore.jks
          - ./gradlew assembleDebug crashlyticsUploadDistributionDebug
+
 
     release:
        branch: /release\/.*/
