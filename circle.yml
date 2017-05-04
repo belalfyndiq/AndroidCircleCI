@@ -29,9 +29,6 @@ dependencies:
       - if [ ! -e /usr/local/android-sdk-linux/build-tools/25.0.2 ]; then echo y | android update sdk --all --no-ui --filter "build-tools-25.0.2"; fi;
       - if [ ! -e /usr/local/android-sdk-linux/platforms/android-25 ]; then echo y | android update sdk --all --no-ui --filter "android-25"; fi;
       - if [ ! -e /usr/local/android-sdk-linux/extras/android/m2repository ]; then echo y | android update sdk --all --no-ui --filter "extra-android-m2repository"; fi;
-      - echo $KEYSTORE64> ${HOME}/keystore64.txt
-      - cat ${HOME}/keystore64.txt | base64 --decode > ${HOME}/keystore.jks
-
 test:
     override:
       - ./gradlew test
@@ -40,6 +37,9 @@ deployment:
     development:
        branch: development
        commands:
+         - echo "Running deployment for development"
+         - echo $KEYSTORE64> ${HOME}/keystore64.txt
+#         - cat ${HOME}/keystore64.txt | base64 --d > ${HOME}/keystore.jks
          - ./gradlew assembleDebug crashlyticsUploadDistributionDebug
 
     release:
