@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 function copyEnvVarsToGradleProperties {
     GRADLE_PROPERTIES=$HOME"/AndroidCircleCI/gradle.properties"
     export GRADLE_PROPERTIES
