@@ -20,6 +20,8 @@ machine:
 
 
 dependencies:
+    pre:
+      - source circleCIEnvironmentSetup.sh && copyEnvVarsToGradleProperties
     cache_directories:
       - /usr/local/android-sdk-linux/build-tools/25.0.2
       - /usr/local/android-sdk-linux/platforms/android-25
@@ -38,7 +40,6 @@ deployment:
     development:
        branch: development
        commands:
-         - source circleCIEnvironmentSetup.sh && copyEnvVarsToGradleProperties
          - echo $KEYSTORE64> ${HOME}/keystore64.txt
          - cat ${HOME}/keystore64.txt | base64 --decode > ${HOME}/testkeystore.jks
 #         - ./gradlew assembleDebug crashlyticsUploadDistributionDebug
