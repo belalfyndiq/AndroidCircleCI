@@ -37,7 +37,7 @@ deployment:
     development:
        branch: development
        commands:
-         - source environmentSetup.sh && copyEnvVarsToGradleProperties
+         - source circleCIEnvironmentSetup.sh && copyEnvVarsToGradleProperties
          - echo $KEYSTORE64> ${HOME}/keystore64.txt
          - cat ${HOME}/keystore64.txt | base64 --decode > ${HOME}/testkeystore.jks
 #         - ./gradlew assembleDebug crashlyticsUploadDistributionDebug
