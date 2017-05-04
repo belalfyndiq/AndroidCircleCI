@@ -40,14 +40,15 @@ deployment:
     development:
        branch: development
        commands:
-         - echo $KEYSTORE64> ${HOME}/keystore64.txt
-         - cat ${HOME}/keystore64.txt | base64 --decode > ${HOME}/testkeystore.jks
-#         - ./gradlew assembleDebug crashlyticsUploadDistributionDebug
-         - ./gradlew assembleRelease
+         - ./gradlew assembleDebug crashlyticsUploadDistributionDebug
 
     release:
        branch: /release\/.*/
        commands:
+        - echo $KEYSTORE64> ${HOME}/keystore64.txt
+        - cat ${HOME}/keystore64.txt | base64 --decode > ${HOME}/testkeystore.jks
+        - ./gradlew assembleRelease
+
          #TODO Handling deploying Release Signed apk here.
          #Add deployments Commands for release branches here.
 
