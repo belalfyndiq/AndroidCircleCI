@@ -37,14 +37,11 @@ deployment:
     development:
        branch: development
        commands:
-         - echo "Running deployment for development"
-         - echo $KEYSTORE64
+         - source environmentSetup.sh && copyEnvVarsToGradleProperties
          - echo $KEYSTORE64> ${HOME}/keystore64.txt
-         - echo ${HOME}
-         - cat ${HOME}/keystore64.txt
          - cat ${HOME}/keystore64.txt | base64 --decode > ${HOME}/testkeystore.jks
-         - ./gradlew assembleDebug crashlyticsUploadDistributionDebug
-
+#         - ./gradlew assembleDebug crashlyticsUploadDistributionDebug
+         - ./gradlew assembleRelease
 
     release:
        branch: /release\/.*/
