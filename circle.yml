@@ -7,12 +7,10 @@ general:
        - /home/ubuntu/AndroidCircleCI/app/build/outputs/apk/
        - /home/ubuntu/AndroidCircleCI/app/build/reports/tests/testDebugUnitTest/
 
-
     branches:
        only:
           - development
           - /release\/.*/
-
 
 machine:
     environment:
@@ -34,7 +32,6 @@ dependencies:
 test:
     override:
       - ./gradlew test
-
 
 deployment:
     development:
