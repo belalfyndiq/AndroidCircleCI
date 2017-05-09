@@ -45,8 +45,8 @@ android {
         applicationId "com.bombom.belalmohamed.androidcircleci"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 6
-        versionName "1.0"
+        versionCode 7
+        versionName "1.0.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         playAccountConfig = playAccountConfigs.defaultAccountConfig
     }
