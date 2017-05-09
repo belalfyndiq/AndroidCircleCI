@@ -47,7 +47,5 @@ deployment:
        commands:
         - echo $KEYSTORE64> ${HOME}/keystore64.txt
         - cat ${HOME}/keystore64.txt | base64 --decode > ${HOME}/testkeystore.jks
-        - ./gradlew assembleRelease
-
-        #TODO HANDLE RELEASE ON BETA HERE.
+        - ./gradlew publishRelease
 
