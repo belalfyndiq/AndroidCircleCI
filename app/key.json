@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "api-7166173122551061304-103994",
+  "private_key_id": "b85fe11fb9e02e0847036c5251382da871e8d8f6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDHXJ8PLM/+PSFY\nrDg9seljfBLB/xnkfxKfwtdv8/9QTreLKkZw9rlxblcsD+FLjbJM2F2YG4tUBxc3\nzUP2lsfNTNaEcqfrwiLhrL/CppjAkx+1SOwQej3XODt086bo0IWcK2oMYptsJh68\nKIlDWbQGfxdMLR9kquMrvpyh9YAMn5ptP5nTK+/7E7H0T7syqlTbkLcxNvVD+0j+\nSv1oK/W9eRe9yFkaRh6T431KKcEqxMm/Eiks6DKfy5b/vGTMpazXCmgc6j/7okKh\nmmxlozWZEbmFKNwu7AVIW++JkuSyv+avxBZH7GTKqzY5YpfT3uR+gXwrw1dQF1qS\ndaJimb0ZAgMBAAECggEAeAbymK9RNm9VgU6GudZAfq33mSbeTuyWqOsky/lqEM6j\nwLyeFmrk8T8Oaq/Q460W2R83ElobA2cVenox3eefuaH2UV26bb2/RIG+HhIxS1gI\nshuKTM1cKBRp75q2Nds9Ze3ZdkVz76PvwzbglVUPhw3DWBCeovwjs3WaVgQ5qN7q\nO25Vt00ruuDX9Z64/02JQIWcnBgTsjQtJKfh5RqVDshxMNU/z1Hzlt6kGksW4DhO\nw0WM2Np5K735UzD6OMy0zJhUHCQk3YksWd5SJX5AO1uyiFPenCh9nKXnrDSF36Xs\nys9jsndEQsOj8TwAL4xaw1JQBV688o/QG2lBAVy+gQKBgQDte4qEKGwuVCGIGGW1\nKoCPrCq/SmReF9Ktf7ztL78juOAtxC0vhsnQsTpS0+8OEsqXo02NZvxhZjq42qmu\nIqL62/GZhfgKiue//8h9mLe/wBv5fMAZMXDqOJchex2zdyCaBURm1amhvIB9bP1a\nYOTuxKbhL0xuOBTtPA8UsjzRUQKBgQDW6CPoEI3ek14h9Bw5atLpKUFHBpB3JUGS\nPlKkWYmAzEBqslg/KIMAIioi0b4LB/GwopnljzSEGYbeg3j+0B2O+B/hgyY8kPsD\n9WofnjJRgqSfuoLCgoZTOLLdARj6DqRJM/4uGDGNBBXGFjlBMG5i6NBqut140npz\nwLSTjNX9SQKBgDQwC/aS84MS1fOUePVhC7OHADXdYUUUMyYRhjERZw2wmQM1s0BY\nfI0yBUEidcw/8Ol155sFYLz+vDTXSKaN0gcSwnscZ6/ZaqhUy3heUTMAQqWG9qgS\np1+xY/Tlm1dO/IkcUzXOCmMSi6IEi4CK/oRCDvI5dLBb/q1Ln3zK1nahAoGBAI0r\nDHsidK7iixEus2OcIlN7ACBR1ZAObxZLzimbj1GF2kK8SG+kgvkReDBLKtVAMKlh\nBkrfWRX1VrzQDCkGOIRzxS1z4ygh7GHbUgzW9CLK+Kzb7Y0sBGSieAvo7qlD+PMF\nLlDFH7eMGWl3q8CAueJLIK0bduQpDrr+uR+7gc3RAoGAF/GbXENDc4zc0gBR8/bx\nXd3kzGM/cBhN8c4flqjpoEN5pEf8AzQ1G9OQzBxAUqvfdAV3YUlTbGmQhtpE5ldR\nd/D/1Y6saiq24bG+Q8WmzmO0A2ds65eMSPRIr38VopDZbUYXmg/0DiOCcUHz7LZF\njtMDCJhmT1beBWPUnpZMPS8=\n-----END PRIVATE KEY-----\n",
+  "client_email": "circleci-deployment-account@api-7166173122551061304-103994.iam.gserviceaccount.com",
+  "client_id": "102965490772305576804",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/circleci-deployment-account%40api-7166173122551061304-103994.iam.gserviceaccount.com"
+}

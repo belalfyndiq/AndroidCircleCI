@@ -9,12 +9,25 @@ buildscript {
 }
 apply plugin: 'com.android.application'
 apply plugin: 'io.fabric'
+apply plugin: 'com.github.triplet.play'
 
 repositories {
     maven { url 'https://maven.fabric.io/public' }
 }
 
 android {
+
+    playAccountConfigs {
+        defaultAccountConfig {
+            serviceAccountEmail = 'circleci-deployment-account@api-7166173122551061304-103994.iam.gserviceaccount.com'
+            jsonFile = file('key.json')
+        }
+    }
+
+    play {
+        track = 'beta'
+        uploadImages = true
+    }
 
     signingConfigs {
         config {
@@ -27,13 +40,15 @@ android {
 
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
+
     defaultConfig {
         applicationId "com.bombom.belalmohamed.androidcircleci"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 1
+        versionCode 6
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        playAccountConfig = playAccountConfigs.defaultAccountConfig
     }
     buildTypes {
         release {
